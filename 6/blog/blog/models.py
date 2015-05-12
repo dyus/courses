@@ -20,6 +20,9 @@ class Post(models.Model):
     def __unicode__(self):
         return u'%s %s' % (self.name, self.author)
 
+    def sum(self, a, b):
+        return a + b + self.id
+
 
 class Comment(models.Model):
     field1 = models.CharField(max_length=255, verbose_name=u'Тествое поле')
